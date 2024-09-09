@@ -6,13 +6,13 @@
     <title>Praneeth Posina - AI & ML Enthusiast</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -22,16 +22,13 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
     </header>
 
     <main>
         <section id="home" class="section">
             <div class="container">
                 <h1>Praneeth Posina</h1>
-                <p class="subtitle">I'm a <span id="typed-text"></span></p>
+                <p class="subtitle"><span id="typed-text"></span></p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/praneethposina" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/praneethposina" target="_blank"><i class="fab fa-github"></i></a>
@@ -43,7 +40,7 @@
         <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
-                <p>Passionate AI graduate student with experience in software development and machine learning. Skilled in Python, Java, and various ML frameworks. Committed to leveraging cutting-edge technologies to solve complex problems in the field of artificial intelligence.</p>
+                <p>Passionate AI graduate student with experience in machine learning. Skilled in Python, and various ML frameworks. Committed to leveraging cutting-edge technologies to solve complex problems in the field of artificial intelligence.</p>
             </div>
         </section>
 
@@ -121,7 +118,12 @@
                     <p>KL University | Dec 2021 - Jan 2023</p>
                     <ul>
                         <li>Led research on mediastinal lymph node malignancy detection, developing models that increased diagnostic accuracy to 98.2% using reinforcement learning techniques.</li>
-                        <li>Authored two IEEE-published papers, introducing innovative methods that outperformed existing models by 3% and improved precision by 4%.</li>
+                        <li>
+                            Authored two IEEE-published papers 
+                            <span class="paper-link highlight" data-paper="1">[1]</span>
+                            <span class="paper-link highlight" data-paper="2">[2]</span>
+                            , introducing innovative methods that outperformed existing models by 3% and improved precision by 4%.
+                        </li>
                         <li>Engineered and validated custom deep learning algorithms, including a DQN policy and an ensemble learning strategy, achieving a 98.56% accuracy rate.</li>
                         <li>Analyzed extensive medical image datasets, ensuring robust model performance and contributing to significant advancements in medical diagnostics.</li>
                     </ul>
@@ -194,5 +196,13 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Add these divs at the end of the body, just before the closing </body> tag -->
+    <div class="paper-preview" id="paper-1">
+        <iframe src="Publication_1_Reinforcement Paper.pdf" class="paper-iframe"></iframe>
+    </div>
+    <div class="paper-preview" id="paper-2">
+        <iframe src="Publication_2_Ensemble Paper.pdf" class="paper-iframe"></iframe>
+    </div>
 </body>
 </html>

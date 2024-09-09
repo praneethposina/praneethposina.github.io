@@ -1,14 +1,15 @@
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #8892b0;
     margin: 0;
     padding: 0;
+    background-color: #0a192f;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     overflow: hidden;
@@ -16,17 +17,13 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: rgba(44, 62, 80, 0.9);
-    padding: 0.3rem 0;
+    background-color: rgba(10, 25, 47, 0.85);
+    padding: 0.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-header.hidden {
-    transform: translateY(-100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -38,19 +35,21 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 0.8rem;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ccd6f6;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 nav ul li a:hover {
-    color: #3498db;
+    color: #64ffda;
 }
 
 .mobile-menu-toggle {
@@ -59,36 +58,62 @@ nav ul li a:hover {
 
 /* Sections */
 .section {
-    padding: 2.5rem 0;
+    padding: 4rem 0;
+    background-color: #0a192f;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Home section */
 #home {
-    background: linear-gradient(135deg, #3498db, #2c3e50);
-    color: #fff;
+    background: #0a192f;
+    color: #ccd6f6;
     text-align: center;
-    padding: 6rem 0 3rem;
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative; /* Add this */
+}
+
+#home .container {
+    max-width: 800px;
+    position: absolute; /* Add this */
+    top: 40%; /* Adjust this value to move it up or down */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
 }
 
 #home h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.social-links {
+    margin-top: 2rem; /* Add some space above the social links */
 }
 
 .social-links a {
     color: #fff;
-    font-size: 1.3rem;
-    margin: 0 0.8rem;
+    font-size: 1.5rem;
+    margin: 0 1rem;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #3498db;
+    color: #64ffda; /* Change hover color to match the accent */
+    transform: translateY(-3px);
 }
 
 /* Skills section */
@@ -102,29 +127,96 @@ nav ul li a:hover {
 }
 
 #skills li {
-    background-color: #e0f7fa;
-    color: #333;
-    padding: 0.4rem 0.8rem;
-    margin: 0.4rem;
-    border-radius: 5px;
+    background-color: #112240;
+    color: #64ffda;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem;
+    border-radius: 25px;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #skills li:hover {
-    background-color: #b2ebf2;
+    background-color: #64ffda;
+    color: #112240;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Projects section */
 .project-item {
-    background-color: #f9f9f9;
-    padding: 1.2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #112240;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #8892b0;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Experience section */
+.experience-item {
+    position: relative;
+    padding: 1.5rem;
+    background-color: #112240;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #8892b0;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.paper-preview {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0a192f; /* Matches the webpage background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.paper-preview.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.paper-iframe {
+    width: 100%;
+    height: 70vh;
+    border: none;
 }
 
 /* Responsive design */
+@media screen and (max-width: 1200px) {
+    .paper-preview {
+        position: static;
+        width: auto;
+        opacity: 1;
+        transform: none;
+        margin-top: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     nav ul {
         display: none;
@@ -137,7 +229,7 @@ nav ul li a:hover {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(44, 62, 80, 0.9);
+        background-color: #2c3e50;
     }
 
     nav ul li {
@@ -147,15 +239,39 @@ nav ul li a:hover {
 
     nav ul li a {
         display: block;
-        padding: 0.8rem;
+        padding: 1rem;
     }
 
     .mobile-menu-toggle {
         display: block;
         background: none;
         border: none;
-        color: #fff;
-        font-size: 1.3rem;
+        color: #ecf0f1;
+        font-size: 1.5rem;
         cursor: pointer;
     }
+}
+
+.paper-link {
+    cursor: pointer;
+    color: #64ffda;
+    text-decoration: underline;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.paper-link.highlight {
+    background-color: rgba(100, 255, 218, 0.2);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.paper-link.highlight:hover {
+    background-color: rgba(100, 255, 218, 0.4);
+}
+
+/* Add this new style for the typing text */
+#typed-text {
+    color: #64ffda; /* Greenish accent color */
+    font-weight: bold;
 }

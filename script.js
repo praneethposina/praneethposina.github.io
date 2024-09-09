@@ -1,15 +1,3 @@
-// Hide header on scroll down, show on scroll up
-let lastScrollTop = 0;
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop && scrollTop > window.innerHeight) {
-        document.querySelector('header').classList.add('hidden');
-    } else {
-        document.querySelector('header').classList.remove('hidden');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
 // Toggle mobile menu
 function toggleMobileMenu() {
     const nav = document.querySelector('nav ul');
@@ -18,7 +6,7 @@ function toggleMobileMenu() {
 
 // Typing effect
 const typed = new Typed('#typed-text', {
-    strings: ['AI Graduate Student', 'Machine Learning Enthusiast'],
+    strings: ['Actively Seeking Fulltime Roles Spring 2025','AI Graduate Student', 'Machine Learning', 'Deep Learning','MLOps','Computer Vision'],
     typeSpeed: 50,
     backSpeed: 30,
     backDelay: 1500,
@@ -55,3 +43,77 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 observer.observe(skillsSection);
+
+// Paper preview functionality
+const paperLinks = document.querySelectorAll('.paper-link');
+const paperPreviews = document.querySelectorAll('.paper-preview');
+let activePreview = null;
+let timeoutId = null;
+
+paperLinks.forEach(link => {
+    link.addEventListener('mouseenter', (e) => {
+        const paperId = e.target.getAttribute('data-paper');
+        const preview = document.getElementById(`paper-${paperId}`);
+        
+        clearTimeout(timeoutId);
+        
+        if (activePreview && activePreview !== preview) {
+            activePreview.classList.remove('show');
+        }
+        
+        preview.classList.add('show');
+        activePreview = preview;
+        
+        // Add highlight class
+        link.classList.add('highlight');
+    });
+
+    link.addEventListener('mouseleave', () => {
+        // Remove highlight class when not hovering
+        link.classList.remove('highlight');
+    });
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (activePreview) {
+        const rect = activePreview.getBoundingClientRect();
+        const isOverPreview = e.clientX >= rect.left && e.clientX <= rect.right &&
+                              e.clientY >= rect.top && e.clientY <= rect.bottom;
+        
+        if (!isOverPreview) {
+            const isOverLink = Array.from(paperLinks).some(link => link.contains(e.target));
+            
+            if (!isOverLink) {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    activePreview.classList.remove('show');
+                    activePreview = null;
+                }, 100); // Reduced from 300ms to 100ms
+            }
+        }
+    }
+});
+
+paperPreviews.forEach(preview => {
+    preview.addEventListener('mouseenter', () => {
+        clearTimeout(timeoutId);
+        // Re-add highlight class to corresponding link
+        const paperId = preview.id.split('-')[1];
+        const link = document.querySelector(`.paper-link[data-paper="${paperId}"]`);
+        link.classList.add('highlight');
+    });
+    
+    preview.addEventListener('mouseleave', () => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            preview.classList.remove('show');
+            activePreview = null;
+            // Remove highlight class from corresponding link
+            const paperId = preview.id.split('-')[1];
+            const link = document.querySelector(`.paper-link[data-paper="${paperId}"]`);
+            link.classList.remove('highlight');
+        }, 100); // Reduced from 300ms to 100ms
+    });
+});
+
+// Remove the existing paper preview animation code
