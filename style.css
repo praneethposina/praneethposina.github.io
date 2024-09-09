@@ -117,10 +117,20 @@ nav ul li a:hover {
 }
 
 /* Skills section */
+#skills .skill-category {
+    margin-bottom: 2rem;
+}
+
+#skills h3 {
+    color: #ccd6f6;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
 #skills ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start; /* Change this to left-align the items */
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -130,7 +140,7 @@ nav ul li a:hover {
     background-color: #112240;
     color: #64ffda;
     padding: 0.6rem 1rem;
-    margin: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0; /* Adjust margin to remove space on the left */
     border-radius: 25px;
     transition: all 0.3s ease;
     font-size: 1rem;
@@ -158,6 +168,29 @@ nav ul li a:hover {
 .project-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-skills {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.project-skills li {
+    background-color: #0a192f;
+    color: #64ffda;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.project-skills li:hover {
+    background-color: #64ffda;
+    color: #0a192f;
 }
 
 /* Experience section */
@@ -274,4 +307,84 @@ nav ul li a:hover {
 #typed-text {
     color: #64ffda; /* Greenish accent color */
     font-weight: bold;
+}
+
+/* Education section */
+#education .education-item {
+    background-color: #112240;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#education .education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#education .education-item h3 {
+    color: #ccd6f6; /* University name in white accent */
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem; /* Slightly larger font for university name */
+}
+
+#education .degree {
+    color: #e6f1ff; /* Degree name in a slightly different white shade */
+    font-weight: 500; /* Medium weight for distinction */
+    font-size: 1.1rem; /* Slightly smaller than university name */
+    margin-bottom: 0.25rem;
+}
+
+#education .date {
+    color: #8892b0;
+    font-style: italic;
+    font-size: 0.9rem; /* Smaller size for date */
+}
+
+#education h3.section-subtitle {
+    color: #ccd6f6; /* Changed to white accent */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+#education ul.courses, #education ul.certifications {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+#education ul.courses li, #education ul.certifications li {
+    background-color: #112240;
+    color: #64ffda;
+    padding: 0.6rem 1rem;
+    margin: 0.25rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#education ul.courses li:hover, #education ul.certifications li:hover {
+    background-color: #64ffda;
+    color: #112240;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#education ul.certifications li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#education ul.certifications li:hover a {
+    color: #112240;
 }
