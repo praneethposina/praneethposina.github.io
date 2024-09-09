@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Add these lines for favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <header>
@@ -48,16 +53,16 @@
             <div class="container">
                 <h2>Education</h2>
                 <div class="education-item">
-                    <h3>University at Buffalo, Buffalo, NY</h3>
-                    <p class="degree">Masters in Artificial Intelligence</p>
-                    <p class="date">Aug 2023 - Dec 2024</p>
+                    <h3 style="color: #ccd6f6; font-size: 1.2rem; font-weight: 500;">University at Buffalo, Buffalo, NY</h3>
+                    <p class="degree" style="color: #e6f1ff; font-size: 1.1rem; font-weight: 500;">Masters in Artificial Intelligence</p>
+                    <p class="date" style="font-size: 0.9rem;">Aug 2023 - Dec 2024</p>
                 </div>
                 <div class="education-item">
-                    <h3>KL University, Hyderabad, India</h3>
-                    <p class="degree">Bachelor of Technology, Electronics and Communication Engineering</p>
-                    <p class="date">Jun 2019 - May 2023</p>
+                    <h3 style="color: #ccd6f6; font-size: 1.2rem; font-weight: 500;">KL University, Hyderabad, India</h3>
+                    <p class="degree" style="color: #e6f1ff; font-size: 1.1rem; font-weight: 500;">Bachelor of Technology, Electronics and Communication Engineering</p>
+                    <p class="date" style="font-size: 0.9rem;">Jun 2019 - May 2023</p>
                 </div>
-                <h3 class="section-subtitle">Relevant Courses</h3>
+                <h3 class="section-subtitle" style="color: #ccd6f6;">Relevant Courses</h3>
                 <ul class="courses">
                     <li class="skill-item">Artificial Intelligence</li>
                     <li class="skill-item">Machine Learning</li>
@@ -75,13 +80,13 @@
                     <li class="skill-item">Data structures</li>
                     <li class="skill-item">Object Oriented Programming</li>
                 </ul>
-                <h3 class="section-subtitle">Certifications</h3>
+                <h3 class="section-subtitle" style="color: #ccd6f6;">Certifications</h3>
                 <ul class="certifications">
-                    <li><a href="https://www.credly.com/badges/0d571c82-84de-45a6-be40-7a4586b487ce/linked_in_profile" target="_blank">Azure AI fundamentals</a></li>
-                    <li><a href="https://www.cloudskillsboost.google/public_profiles/41858d09-9fab-4e18-8de2-e1c93f21f815" target="_blank">Google Cloud Skill Badges</a></li>
-                    <li><a href="https://www.credly.com/badges/bb166fe0-ab3e-4fef-92e8-083dacd486d3/print" target="_blank">AWS Machine Learning Foundations</a></li>
-                    <li><a href="https://www.credly.com/badges/b5583aa9-21a9-4d1e-9e0d-f700eed24070/print" target="_blank">AWS Cloud Foundations</a></li>
-                    <li><a href="https://drive.google.com/file/d/1JDuXoYwupMhW7LEB_lKfvhJSHkWURgSt/view" target="_blank">Oracle CI Architect Associate</a></li>
+                    <li><a href="https://www.credly.com/badges/0d571c82-84de-45a6-be40-7a4586b487ce/linked_in_profile" target="_blank">Azure AI fundamentals <i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://www.cloudskillsboost.google/public_profiles/41858d09-9fab-4e18-8de2-e1c93f21f815" target="_blank">Google Cloud Skill Badges <i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://www.credly.com/badges/bb166fe0-ab3e-4fef-92e8-083dacd486d3/print" target="_blank">AWS Machine Learning Foundations <i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://www.credly.com/badges/b5583aa9-21a9-4d1e-9e0d-f700eed24070/print" target="_blank">AWS Cloud Foundations <i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://drive.google.com/file/d/1JDuXoYwupMhW7LEB_lKfvhJSHkWURgSt/view" target="_blank">Oracle CI Architect Associate <i class="fas fa-external-link-alt"></i></a></li>
                 </ul>
             </div>
         </section>
@@ -166,7 +171,7 @@
                     </ul>
                 </div>
                 <div class="project-item">
-                    <h3>Multi-Agent Reinforcement Learning System</h3>
+                    <h3 data-github="https://github.com/praneethposina/praneethposina-Multi-Agent-Reinforcement-Learning-System">Multi-Agent Reinforcement Learning System</h3>
                     <p>Architected and implemented a complex multi-agent game environment, leveraging DQN and A2C algorithms to train competitive AI agents. Achieved 99% target rate and 80% improvement in agent efficiency over 2000 training episodes, significantly outperforming random baseline models.</p>
                     <ul class="project-skills">
                         <li class="skill-item">RL</li>
@@ -175,7 +180,7 @@
                     </ul>
                 </div>
                 <div class="project-item">
-                    <h3>Deepfake Detection System</h3>
+                    <h3 data-github="https://github.com/praneethposina/DeepfakeDetection">Deepfake Detection System</h3>
                     <p>Engineered a state-of-the-art deepfake detection model using ResNeXt101 architecture and Bidirectional LSTM, achieving 91.30% validation accuracy and 86.96% test accuracy on a 477GB dataset. Outperformed baseline CNN by 17.95% and matched leading models like EfficientNet in accuracy while providing superior interpretability through heatmap visualizations.</p>
                     <ul class="project-skills">
                         <li class="skill-item">OpenCV</li>
@@ -185,18 +190,18 @@
                     </ul>
                 </div>
                 <div class="project-item">
-                    <h3>Sentiment Analysis of Airline Reviews</h3>
-                    <p>Designed an LSTM-based model for sentimental analysis of airline reviews with 95% accuracy on a dataset of 11,500 tweets, enabling more precise analysis of customer feedback.</p>
+                    <h3 data-github="https://github.com/praneethposina/object_detection_yolo">Object Detection using YOLO Algorithm</h3>
+                    <p>Built an object detection system using the YOLO computer vision technique to identify and locate objects within an image or video, achieving a 97% accuracy rate.</p>
                     <ul class="project-skills">
-                        <li class="skill-item">NLP</li>
+                        <li class="skill-item">OpenCV</li>
                         <li class="skill-item">Python</li>
                     </ul>
                 </div>
                 <div class="project-item">
-                    <h3>Object Detection using YOLO Algorithm</h3>
-                    <p>Built an object detection system using the YOLO computer vision technique to identify and locate objects within an image or video, achieving a 97% accuracy rate.</p>
+                    <h3>Sentiment Analysis of Airline Reviews</h3>
+                    <p>Designed an LSTM-based model for sentimental analysis of airline reviews with 95% accuracy on a dataset of 11,500 tweets, enabling more precise analysis of customer feedback.</p>
                     <ul class="project-skills">
-                        <li class="skill-item">OpenCV</li>
+                        <li class="skill-item">NLP</li>
                         <li class="skill-item">Python</li>
                     </ul>
                 </div>

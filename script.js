@@ -117,3 +117,10 @@ paperPreviews.forEach(preview => {
 });
 
 // Remove the existing paper preview animation code
+
+// Make project titles clickable
+document.querySelectorAll('.project-item h3[data-github]').forEach(title => {
+    title.addEventListener('click', () => {
+        window.open(title.dataset.github, '_blank');
+    });
+});

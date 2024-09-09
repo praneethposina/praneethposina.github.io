@@ -209,6 +209,12 @@ nav ul li a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.experience-item h3 {
+    color: #e6f1ff; /* Brighter color for the job title */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
 .paper-preview {
     position: fixed;
     left: 50%;
@@ -368,13 +374,20 @@ nav ul li a:hover {
     transition: all 0.3s ease;
     font-size: 0.9rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add this */
 }
 
-#education ul.courses li:hover, #education ul.certifications li:hover {
-    background-color: #64ffda;
-    color: #112240;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+#education ul.certifications li {
+    background-color: #112240;
+    color: #64ffda;
+    padding: 0.6rem 1rem;
+    margin: 0.25rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500; /* Make the text slightly bolder */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 #education ul.certifications li a {
@@ -383,8 +396,55 @@ nav ul li a:hover {
     display: block;
     width: 100%;
     height: 100%;
+    padding-right: 0.75rem; /* Reduced padding to bring arrow closer */
+}
+
+#education ul.certifications li a::after {
+    content: none;
+}
+
+#education ul.certifications li:hover a::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(2px);
+}
+
+#education ul.certifications li:hover {
+    background-color: #64ffda;
+    color: #112240;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 #education ul.certifications li:hover a {
     color: #112240;
+}
+
+.project-link {
+    display: none;
+}
+
+/* Remove arrow from project titles */
+.project-item h3 {
+    color: #e6f1ff; /* Brighter color for project titles */
+    cursor: pointer;
+    padding-right: 1.5rem; /* Add padding for the arrow */
+    position: relative; /* Position relative for absolute positioning of arrow */
+}
+
+.project-item h3[data-github]::after {
+    content: '\f35d'; /* Unicode for Font Awesome's external link icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover h3[data-github]::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(2px);
 }
