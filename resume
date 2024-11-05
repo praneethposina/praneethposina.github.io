@@ -1,0 +1,54 @@
+Praneeth Posina
+716-468-9996 | leelasat@buffalo.edu | linkedin.com/in/praneethposina | github.com/praneethposina
+EDUCATION
+University at Buffalo, Buffalo, NY
+Masters in Artificial Intelligence Aug 2023 - Dec 2024
+KL University, Hyderabad, India
+Bachelor of Technology, Electronics and Communication Engineering Jun 2019 - May 2023
+Relevant Courses: Artificial Intelligence, Machine Learning, Math for Computing, Algorithms Analysis and Design, Data Intensive
+Computing, Computer Vision, Reinforcement Learning, Pattern Recognition, Deep Learning, Data Science & Big
+data, Statistics, Probability, Computer programming, Data structures, Object Oriented Programming.
+Certifications: Azure AI fundamentals, Google Cloud Skill Badges, AWS Machine Learning Foundations, Oracle CI Architect Associate.
+SKILLS
+Languages: Python, C, JAVA.
+Frameworks & Libraries: MLFlow, TensorFlow, Keras, Scikit, NLTK, OpenCV, CUDA, PyTorch, Hadoop, MapReduce, MATLAB.
+Other Skills: Deep Learning, MLOps, CI/CD, Git Versioning, Computer Vision, Large Language Models, Natural Language Processing,
+SQL, Computer Science, Data Analytics, Cloud Computing.
+EXPERIENCE
+ML Research Assistant
+KL University Dec 2021 - Jan 2023
+• Led research on mediastinal lymph node malignancy detection, developing models that increased diagnostic accuracy to 98.2%
+using reinforcement learning techniques.
+• Authored two IEEE-published papers [1] [2], introducing innovative methods that outperformed existing models by 3% and
+improved precision by 4%.
+• Engineered and validated custom deep learning algorithms, including a DQN policy and an ensemble learning strategy,
+achieving a 98.56% accuracy rate.
+• Analyzed extensive medical image datasets, ensuring robust model performance and contributing to significant advancements
+in medical diagnostics.
+PROJECTS
+Text Generative AI Gen AI, LLMs, Python
+• Developed a text-generative AI system using a transformers to generate fiction stories, Trained over the vocabulary size of
+42610 with 43 million parameters. Optimized the model architecture and hyperparameters to achieve a 4.02% testing loss in
+generating coherent and diverse storylines.
+Multi-Agent Reinforcement Learning System RL, PyTorch, Python
+• Architected and implemented a complex multi-agent game environment, leveraging DQN and A2C algorithms to train
+competitive AI agents. Achieved 99% target rate and 80% improvement in agent efficiency over 2000 training episodes,
+significantly outperforming random baseline models.
+Deepfake Detection System OpenCV, Deep Learning, PyTorch, Python
+• Engineered a state-of-the-art deepfake detection model using ResNeXt101 architecture and Bidirectional LSTM, achieving
+91.30% validation accuracy and 86.96% test accuracy on a 477GB dataset. Outperformed baseline CNN by 17.95% and matched
+leading models like EfficientNet in accuracy while providing superior interpretability through heatmap visualizations.
+Sentiment Analysis of Airline Reviews NLP, Python
+• Designed an LSTM-based model for sentimental analysis of airline reviews with 95% accuracy on a dataset of 11,500 tweets,
+enabling more precise analysis of customer feedback.
+Object Detection using YOLO Algorithm OpenCV, Python
+• Built an object detection system using the YOLO computer vision technique to identify and locate objects within an image or
+video, achieving a 97% accuracy rate.
+Movie Gross Revenue Prediction Data Analysis, Python
+• Analyzed dataset of over 10000 movies, predicting gross revenue with 92.56% accuracy. Applied data analytics to deliver
+actionable insights for informed decision-making in the entertainment sector.
+ACHIEVEMENTS & LEADERSHIP
+• Secured 13th Rank in India’s nationwide Machine Learning hackathon challenge 2021.
+• Mentored over 150 students as Vice President of the University’s Coding Club, fostering a culture of coding practice and
+participation in coding challenges.
+• Awarded the Prime Minister’s scholarship for exceptional academic performance throughout undergrad studies in India.
