@@ -6,22 +6,43 @@ function toggleMobileMenu() {
 
 // Typing effect
 const typed = new Typed('#typed-text', {
-    strings: ['Actively Seeking Fulltime Roles Spring 2025','AI Graduate Student', 'Machine Learning', 'Deep Learning','MLOps','Computer Vision'],
-    typeSpeed: 50,
-    backSpeed: 30,
+    strings: ['Actively Seeking Fulltime Roles','AI Graduate Student', 'Machine Learning', 'Deep Learning','MLOps','Computer Vision'],
+    typeSpeed: 200,
+    backSpeed: 100,
     backDelay: 1500,
     loop: true
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scrolling for navigation links and scroll arrow
+document.querySelectorAll('a[href^="#"], .scroll-up-arrow').forEach(element => {
+    element.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        
+        // Get the target section id from href attribute or default to 'home' for scroll arrow
+        const targetId = this.getAttribute('href') || '#home';
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
+
+// Add IntersectionObserver to track current section
+const sections = document.querySelectorAll('.section');
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+        } else {
+            entry.target.classList.remove('in-view');
+        }
+    });
+}, { threshold: 0.5 });
+
+sections.forEach(section => sectionObserver.observe(section));
 
 // Add animation to skills
 function animateSkills() {
@@ -116,8 +137,6 @@ paperPreviews.forEach(preview => {
     });
 });
 
-// Remove the existing paper preview animation code
-
 // Make project titles clickable
 document.querySelectorAll('.project-item h3[data-github]').forEach(title => {
     title.addEventListener('click', () => {
@@ -148,4 +167,25 @@ clickableElements.forEach(element => {
     element.addEventListener('mouseleave', () => {
         cursorGlow.style.opacity = '0.5';
     });
+});
+
+// Scroll arrow functionality
+document.querySelector('.scroll-up-arrow').addEventListener('click', () => {
+    const currentSection = Array.from(sections).find(section => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+    });
+
+    if (currentSection) {
+        const nextSection = currentSection.nextElementSibling;
+        if (nextSection && nextSection.classList.contains('section')) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // If no next section, scroll to top
+            document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
+        }
+    } else {
+        // If no current section in view, scroll to first section
+        sections[0].scrollIntoView({ behavior: 'smooth' });
+    }
 });
