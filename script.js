@@ -7,8 +7,8 @@ function toggleMobileMenu() {
 // Typing effect
 const typed = new Typed('#typed-text', {
     strings: ['Actively Seeking Fulltime Roles','AI Graduate Student', 'Machine Learning', 'Deep Learning','MLOps','Computer Vision'],
-    typeSpeed: 200,
-    backSpeed: 100,
+    typeSpeed: 20,
+    backSpeed: 0,
     backDelay: 1500,
     loop: true
 });
